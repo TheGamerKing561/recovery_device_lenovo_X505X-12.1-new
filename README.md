@@ -1,4 +1,4 @@
-# TWRP device tree for Lenovo Smart Tab M10 HD wifi (TB-X505F)
+# TWRP device tree for Lenovo Smart Tab M10 HD (TB-X505X)
 
 ## Release info
 This is an unofficial build.  It decrypts data partition.  MTP working.  Install at your own risk.
@@ -9,7 +9,7 @@ Build with minimal AOSP TWRP for Android 11.0.
 
 ![Lenovo Smart Tab M10 HD](https://static.lenovo.com/ww/campaigns/2019/smarttab/lenovo-smart-tab-gallery-5.jpg "Lenovo Smart Tab M10 HD (TB-X505F)")
 
-Recovery Device Tree for Lenovo Smart Tab M10 HD wifi (TB-X505F)
+Recovery Device Tree for Lenovo Smart Tab M10 HD (TB-X505X)
 ================================================================
 Component   | Specs
 -------:|:-------------------------
@@ -34,6 +34,6 @@ To build:
 
 ```
 . build/envsetup.sh
-lunch twrp_X505F-eng
+lunch twrp_X505X-eng
 mka recoveryimage
 ```

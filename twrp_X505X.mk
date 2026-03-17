@@ -16,7 +16,7 @@
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Release name
-PRODUCT_RELEASE_NAME := X505F
+PRODUCT_RELEASE_NAME := X505X
 
 # inherit the usual stuff...
 $(call inherit-product, build/target/product/aosp_base.mk)
@@ -25,7 +25,7 @@ $(call inherit-product, build/target/product/aosp_base.mk)
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := Lenovo
-PRODUCT_MODEL := Lenovo TB-X505F
+PRODUCT_MODEL := Lenovo TB-X505X
 PRODUCT_MANUFACTURER := LENOVO
 
 # for FBE decryption 
