@@ -15,10 +15,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_X505X.mk
+    $(LOCAL_DIR)/twrp_X505L.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_X505X-userdebug \
-    twrp_X505X-user \
-    twrp_X505X-eng
+    twrp_X505L-userdebug \
+    twrp_X505L-user \
+    twrp_X505L-eng
 

@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-DEVICE_PATH := device/lenovo/X505X
+DEVICE_PATH := device/lenovo/X505L
 
 # Architecture
 TARGET_ARCH := arm64
@@ -133,7 +133,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_OVERRIDE_SYSTEM_PROPS := \
   "ro.build.fingerprint=ro.system.build.fingerprint;\
    ro.build.version.incremental;\
-   ro.product.name=X505X"
+   ro.product.name=X505L"
 
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
