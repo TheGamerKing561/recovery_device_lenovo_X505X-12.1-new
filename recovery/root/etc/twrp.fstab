@@ -15,6 +15,10 @@
 /cache           ext4              /dev/block/bootdevice/by-name/cache      flags=display="Cache"
 
 /persist         ext4              /dev/block/bootdevice/by-name/persist    flags=display="Persist";backup=1
+/efs1            emmc              /dev/block/bootdevice/by-name/modemst1   flags=backup=1;display="EFS"
+/efs2            emmc              /dev/block/bootdevice/by-name/modemst2   flags=backup=1;subpartitionof=/efs1
+/efsc            emmc              /dev/block/bootdevice/by-name/fsc        flags=backup=1;subpartitionof=/efs1
+/efsg            emmc              /dev/block/bootdevice/by-name/fsg        flags=backup=1;subpartitionof=/efs1
 /dsp             ext4              /dev/block/bootdevice/by-name/dsp        
 /misc            emmc              /dev/block/bootdevice/by-name/misc       flags=backup=1
 
@@ -22,5 +26,5 @@
 /usb-otg         auto              /dev/block/sda1                          flags=display="USB OTG";storage;wipeingui;removable
 
 /aboot           emmc              /dev/block/bootdevice/by-name/aboot      flags=display="aboot";backup=1
-#/splash          emmc              /dev/block/bootdevice/by-name/splash     flags=display="splash";backup=1
-#/lenovoraw       vfat              /dev/block/bootdevice/by-name/lenovoraw  flags=display="lenovoraw";backup=1
+#/splash         emmc              /dev/block/bootdevice/by-name/splash     flags=display="splash";backup=1
+#/lenovoraw      vfat              /dev/block/bootdevice/by-name/lenovoraw  flags=display="lenovoraw";backup=1
