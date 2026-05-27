@@ -76,6 +76,7 @@ TARGET_BOARD_PLATFORM := msm8937
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno504
 TARGET_BOARD_SUFFIX := _64
 TARGET_SUPPORTS_64_BIT_APPS := true
+BOARD_USES_QCOM_HARDWARE := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
@@ -96,8 +97,6 @@ BOARD_ROOT_EXTRA_SYMLINKS := /vendor/firmware_mnt:/firmware
 
 # decryption
 TW_USE_FSCRYPT_POLICY := 1
-TW_EXCLUDE_APEX := true
-TW_INCLUDE_RESETPROP := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 TW_INCLUDE_CRYPTO := true
 PLATFORM_VERSION := 16.1.0
@@ -112,11 +111,20 @@ RECOVERY_TOUCHSCREEN_SWAP_XY := true
 RECOVERY_TOUCHSCREEN_FLIP_Y := true
 
 # TWRP specific build flags
-BOARD_USES_QCOM_HARDWARE := true
+
 TARGET_RECOVERY_QCOM_RTC_FIX := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 TW_FRAMERATE := 60
 TW_EXTRA_LANGUAGES := true
+
+# Needed for android-12.1 branch to boot
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_LIBRESETPROP := true
+
+TW_INCLUDE_NTFS_3G := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 TW_INPUT_BLACKLIST := "hbtp_vm"
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -130,18 +138,15 @@ TW_USE_LEGACY_BATTERY_SERVICES := true
 #TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bms
 
 TW_HAS_EDL_MODE := true
-TW_INCLUDE_NTFS_3G := true
 
 TW_OVERRIDE_SYSTEM_PROPS := \
   "ro.build.fingerprint=ro.system.build.fingerprint;\
    ro.build.version.incremental;\
    ro.product.name=X505X"
 
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
-
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_APEX := true
 
 
 # Device Assert
