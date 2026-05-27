@@ -4,7 +4,7 @@
 # Features
 Everything is working, including:
 
-- FBE decryption (with support for Android 12+ ROMs)
+- FBEv1 decryption (with support for Android 12+ ROMs)
 - MTP
 - USB OTG
 ### About Device
@@ -26,7 +26,7 @@ Battery | 4850 mAh, Li-Po (non-removable)
 Display | 1280x800 pixels, 10.1"
 Front Camera | 2.0 MP, fixed focus
 Rear Camera  | 5.0 MP, auto focus
-Wifi | dual band, 802.11a/ac/b/g/n
+WiFi | dual band, 802.11a/ac/b/g/n
 Bluetooth | v4.2
 USB | microUSB
 Release Date | April 2019
