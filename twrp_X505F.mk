@@ -21,6 +21,9 @@ PRODUCT_RELEASE_NAME := X505F
 # inherit the usual stuff...
 $(call inherit-product, build/target/product/aosp_base.mk)
 
+# Shipping API level 
+PRODUCT_SHIPPING_API_LEVEL := 28
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
