@@ -1,4 +1,3 @@
-#
 #	This file is part of the OrangeFox Recovery Project
 # 	Copyright (C) 2021-2026 The OrangeFox Recovery Project
 #
@@ -41,11 +40,19 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	export TARGET_DEVICE_ALT="TB-X505X"
 
-  export OF_FLASHLIGHT_ENABLE=0
+    export OF_FLASHLIGHT_ENABLE=0
 
-  export OF_DEFAULT_KEYMASTER_VERSION=4.0
+    export OF_DEFAULT_KEYMASTER_VERSION=4.0
 
 	export FOX_VANILLA_BUILD=1
+  
+    # Check whether we are building OrangeFox or not
+    if [ -f "$(gettop)/bootable/recovery/orangefox.mk" ]; then
+        # If we are building OrangeFox, set BUILDING_ORANGEFOX to true
+        # This flag is then checked in BoardConfig.mk to set TW_THEME to "portrait_hdpi" since
+        # OrangeFox currently doesn't have a "landscape_hdpi" theme like TWRP.
+        export BUILDING_ORANGEFOX=true
+    fi
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"

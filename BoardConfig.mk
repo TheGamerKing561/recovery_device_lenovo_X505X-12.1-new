@@ -105,10 +105,14 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
 # display
+ifeq ($(BUILDING_ORANGEFOX),true)
+TW_THEME := portrait_hdpi
+else
 TW_THEME := landscape_hdpi
 TW_ROTATION := 90
 RECOVERY_TOUCHSCREEN_SWAP_XY := true
 RECOVERY_TOUCHSCREEN_FLIP_Y := true
+endif
 
 # TWRP specific build flags
 
