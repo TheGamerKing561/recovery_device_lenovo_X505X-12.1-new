@@ -16,7 +16,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="X505X"
+FDEVICE="X505F"
 
 fox_get_target_device() {
   if echo "$BASH_SOURCE" | grep -q "/$FDEVICE/"; then
@@ -38,7 +38,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
 
-	export TARGET_DEVICE_ALT="TB-X505X"
+	export TARGET_DEVICE_ALT="TB-X505F"
 
     export OF_FLASHLIGHT_ENABLE=0
 
