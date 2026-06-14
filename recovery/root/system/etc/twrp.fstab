@@ -25,7 +25,7 @@
 
 /sdcard1         auto              /dev/block/mmcblk1p1                     flags=display="MicroSD";storage;wipeingui;removable
 /usb_otg         auto              /dev/block/sda1                          flags=display="USB Storage";storage;wipeingui;removable
-/storage	     auto              /data/media/0                  		    flags=backup=1;display="Internal Storage"
+/storage         auto              /data/media/0                  		    flags=backup=1;display="Internal Storage"
 
 /aboot           emmc              /dev/block/bootdevice/by-name/aboot      flags=display="aboot";backup=1
 #/splash         emmc              /dev/block/bootdevice/by-name/splash     flags=display="splash";backup=1
