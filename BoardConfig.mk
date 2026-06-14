@@ -109,10 +109,10 @@ ifeq ($(BUILDING_ORANGEFOX),true)
 TW_THEME := portrait_hdpi
 else
 TW_THEME := landscape_hdpi
+endif
 TW_ROTATION := 90
 RECOVERY_TOUCHSCREEN_SWAP_XY := true
 RECOVERY_TOUCHSCREEN_FLIP_Y := true
-endif
 
 # TWRP specific build flags
 
