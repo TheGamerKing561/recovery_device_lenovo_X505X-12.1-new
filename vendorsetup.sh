@@ -45,6 +45,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_DEFAULT_KEYMASTER_VERSION=4.0
 
 	export FOX_VANILLA_BUILD=1
+
+    export OF_ENABLE_FRP_ADDON=1
   
     # Check whether we are building OrangeFox or not
     if [ -f "$(gettop)/bootable/recovery/orangefox.mk" ]; then
