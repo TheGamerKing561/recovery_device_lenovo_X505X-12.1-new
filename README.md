@@ -1,5 +1,6 @@
-# TWRP device tree for Lenovo Smart Tab M10 HD (TB-X505L)
+# TWRP/OrangeFox device tree for Lenovo Tab M10 HD (TB-X505L)
 
+Based on the original X505F device tree by @Yahoo-Mike.
 
 # Features
 Everything is working, including:
@@ -9,10 +10,9 @@ Everything is working, including:
 - USB OTG
 ### About Device
 
-![Lenovo Smart Tab M10 HD](https://static.lenovo.com/ww/campaigns/2019/smarttab/lenovo-smart-tab-gallery-5.jpg "Lenovo Smart Tab M10 HD (TB-X505F)")
+![Lenovo Tab M10 HD](https://static.lenovo.com/ww/campaigns/2019/smarttab/lenovo-smart-tab-gallery-5.jpg "Lenovo Tab M10 HD")
 
 
-================================================================
 Component   | Specs
 -------:|:-------------------------
 Chipset| Qualcomm Snapdragon 429 (SDM429)
@@ -40,4 +40,12 @@ lunch twrp_X505L-eng
 mka recoveryimage
 ```
 
-Note: You have to apply the patch in "patches" folder to the TWRP source (bootable/recovery directory) before building to fix battery percentage indicator.
+Note: You have to apply the patch in "patches" folder to the TWRP/OrangeFox source (bootable/recovery directory) before building to fix battery percentage indicator.
+
+## Credits
+
+- Yahoo Mike (@Yahoo-Mike on GitHub, @Yahoo Mike on XDA) - For the original TWRP device tree bring-up for X505F
+
+- Tonyha7 (@Tonyha7 on GitHub, @Tonyha7 on XDA) - Android 12+ decryption support
+
+- TheGamerKing (@TheGamerKing561 on GitHub, @TheGamerKing on XDA) - For X505X bring-up, OrangeFox bring-up, device tree improvements, and ongoing maintenance to the device tree
