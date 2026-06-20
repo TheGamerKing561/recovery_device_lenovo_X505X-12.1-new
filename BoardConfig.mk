@@ -139,7 +139,7 @@ TW_DEFAULT_BRIGHTNESS := 200
 
 TW_USE_TOOLBOX := true
 TW_USE_LEGACY_BATTERY_SERVICES := true
-#TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bms
+TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bms
 
 TW_HAS_EDL_MODE := true
 
