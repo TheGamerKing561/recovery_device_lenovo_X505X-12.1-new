@@ -48,7 +48,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
     export OF_ENABLE_FRP_ADDON=1
 
-	export OF_SCREEN_H=1680
+	export OF_SCREEN_H=1740
   
     # Check whether we are building OrangeFox or not
     if [ -f "$(gettop)/bootable/recovery/orangefox.mk" ]; then
