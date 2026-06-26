@@ -96,10 +96,11 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/firmware_mnt:/firmware
 
 # decryption
-TW_USE_FSCRYPT_POLICY := 1
-BOARD_USES_QCOM_FBE_DECRYPTION := true
 TW_INCLUDE_CRYPTO := true
-PLATFORM_VERSION := 16.1.0
+TW_INCLUDE_CRYPTO_FBE := true
+BOARD_USES_QCOM_FBE_DECRYPTION := true
+TW_USE_FSCRYPT_POLICY := 1
+PLATFORM_VERSION := 99.87.36
 PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
@@ -139,7 +140,10 @@ TW_DEFAULT_BRIGHTNESS := 200
 
 TW_USE_TOOLBOX := true
 TW_USE_LEGACY_BATTERY_SERVICES := true
-#TW_CUSTOM_BATTERY_PATH := /sys/class/power_supply/bms
+# check init.recovery.qcom.rc, "capacity" file from bms
+# and "status" file from battery, are both symlinked to this path
+# bms provides correct battery capacity, and battery provides charging status
+TW_CUSTOM_BATTERY_PATH := /tmp/battery
 
 TW_HAS_EDL_MODE := true
 
