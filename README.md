@@ -40,8 +40,6 @@ lunch twrp_X505X-eng
 mka recoveryimage
 ```
 
-Note: You have to apply the patch in "patches" folder to the TWRP/OrangeFox source (bootable/recovery directory) before building to fix battery percentage indicator.
-
 ## Credits
 
 - Yahoo Mike (@Yahoo-Mike on GitHub, @Yahoo Mike on XDA) - For the original TWRP device tree bring-up for X505F
