@@ -13,16 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-ALLOW_MISSING_DEPENDENCIES := true
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from X505X device
+$(call inherit-product, device/lenovo/X505X/device.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := X505X
-
-# inherit the usual stuff...
-$(call inherit-product, build/target/product/aosp_base.mk)
-
-# Shipping API level 
-PRODUCT_SHIPPING_API_LEVEL := 28
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
@@ -30,16 +30,3 @@ PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo TB-X505X
 PRODUCT_MANUFACTURER := LENOVO
-
-# for FBE decryption 
-PRODUCT_PACKAGES += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
-
-# for tzdata
-PRODUCT_PACKAGES += \
-    tzdata_twrp
-
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2

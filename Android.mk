@@ -25,6 +25,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter X505X,$(TARGET_DEVICE)),)
-include $(call all-makefiles-under,$(LOCAL_PATH))
+ifeq ($(TARGET_DEVICE),X505X)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
