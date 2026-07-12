@@ -39,12 +39,16 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
  	export ALLOW_MISSING_DEPENDENCIES=true
 
 	export TARGET_DEVICE_ALT="TB-X505L"
+	export FOX_TARGET_DEVICES="TB-X505L,X505L"
 
     export OF_FLASHLIGHT_ENABLE=0
 
     export OF_DEFAULT_KEYMASTER_VERSION=4.0
 
 	export FOX_VANILLA_BUILD=1
+
+	# we don't have hardware buttons, so disable the option to hide navbar
+    export OF_ALLOW_DISABLE_NAVBAR=0
 
     export OF_ENABLE_FRP_ADDON=1
   
